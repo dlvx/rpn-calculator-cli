@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dlvx/rpn-calculator-cli/issues"
   },
-  "homepage": "https://github.com/dlvx/rpn-calculator-cli#readme"
+  "homepage": "https://github.com/dlvx/rpn-calculator-cli#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
