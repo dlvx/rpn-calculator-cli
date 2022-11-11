@@ -102,5 +102,45 @@ describe("Arithmetic operations", () => {
     result = operands[operands.length - 1];
     expect(result).toBe(0.625);
   });
+
+  test("RPN Calculation - Operators before two operands are ignored", () => {
+    let operands: number[] = [];
+    let input = '+'
+    operands = calculate(input, operands)
+    let result = operands[operands.length - 1];
+    expect(result).toBe(0);
+
+    operands = [1];
+    input = '+'
+    operands = calculate(input, operands)
+    result = operands[operands.length - 1];
+    expect(result).toBe(1);
+
+    operands = [];
+    input = '+ 1 - 2'
+    operands = calculate(input, operands)
+    result = operands[operands.length - 1];
+    expect(operands).toEqual([-1, 2]);
+
+    operands = [];
+    input = '+ 1 - 2 +'
+    operands = calculate(input, operands)
+    result = operands[operands.length - 1];
+    expect(result).toBe(1);
+  });
+
+  test("RPN Calculation - Invalid characters are ignored", () => {
+    let operands: number[] = [];
+    let input = '5 &'
+    operands = calculate(input, operands)
+    let result = operands[operands.length - 1];
+    expect(result).toBe(5);
+
+    operands = [];
+    input = '@a'
+    operands = calculate(input, operands)
+    result = operands[operands.length - 1];
+    expect(result).toBe(0);
+  });
 })
 
