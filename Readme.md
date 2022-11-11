@@ -36,24 +36,6 @@ Inquirer will throw an error for any other character.
 
 An operator needs that the operands stack contains at least 2 elements, otherwise it will be disregarded.
 
-### Trade-offs
-
-While working on the unit tests, I found the following scenario:
-
-Let's say the user inputs: 
-
-*+ 1 - 2*
-
-You could expect the resulting stack to be [1, 2] cause none of the operators have two preceeding operands to work with. 
-
-Instead, the resulting stack is [-1, 2]. 
-
-This happens because when the code finds the **-**, due to the operands stack having only the number **1**, it performs the operation **0 - 1**. 
- 
-I have identified the lines of code that cause this and will work on a solution.
-
-While not exactly a critical error, it is a design choice that could confuse the users due to the unexpected result. 
-
 ### Extending the app
 
 Let's say you want to extend this app, maybe create a React framework or a server that executes the calculation given an HTTP request.
