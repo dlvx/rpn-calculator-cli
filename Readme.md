@@ -60,7 +60,11 @@ Let's say you want to extend this app, maybe create a React framework or a serve
 
 The **operations.ts** can be extracted to a separate repository or NPM package and installed in different projects. All you have to do is pass an input with operands and/or operators and an array of operands to the calculation function. The initial array of operands would be empty, but the function will take care of populating it as it analyzes the input. The function will return the new operands array after a calculation has been made. 
 
-I'll try to develop a React version to further exemplify this.
+#### React version and live demo
+
+I have also worked on a quick React version that can be found [here](https://github.com/dlvx/rpn-calculator-react).
+
+You can find a live demo of the React app deployed to Netlify [here](https://stunning-cupcake-063045.netlify.app/).
 
 ### How to run the CLI app
 
@@ -73,3 +77,4 @@ Run **npm start** to run the CLI app. A welcome message with instructions on how
 ### Running tests
 
 After installing the project dependecies, you can run the tests by running **npm test** on the terminal.
+
