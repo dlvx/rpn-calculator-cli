@@ -38,7 +38,7 @@ export function calculate(input: string, operands: number[]): number[] {
     } else if(isOperator) {
       const operator = element;
       const operation = OPERATOR_FUNCTIONS[operator]
-      const b = operands.pop();
+      const b = operands.pop() || 0;
       const a = operands.pop();
       const result = a && b ? operation(a, b) : b;
       operands = [...operands, result];
