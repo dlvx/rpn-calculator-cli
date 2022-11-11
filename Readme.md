@@ -54,6 +54,22 @@ I have identified the lines of code that cause this and will work on a solution.
 
 While not exactly a critical error, it is a design choice that could confuse the users due to the unexpected result. 
 
+### Extending the app
+
+Let's say you want to extend this app, maybe create a React framework or a server that executes the calculation given an HTTP request.
+
+The **operations.ts** can be extracted to a separate repository or NPM package and installed in different projects. All you have to do is pass an input with operands and/or operators and an array of operands to the calculation function. The initial array of operands would be empty, but the function will take care of populating it as it analyzes the input. The function will return the new operands array after a calculation has been made. 
+
+I'll try to develop a React version to further exemplify this.
+
 ### How to run the CLI app
 
-[in progress]
+Make sure you have Node installed. I developed this application using Node v16.17.0. 
+
+Clone this repository using Git, once cloned, open a terminal at the project folder and run **npm install** to install all the project dependencies. 
+
+Run **npm start** to run the CLI app. A welcome message with instructions on how to use the app should be displayed.
+
+### Running tests
+
+After installing the project dependecies, you can run the tests by running **npm test** on the terminal.
