@@ -1,0 +1,19 @@
+{
+  "name": "rpn-calculator-cli",
+  "version": "1.0.0",
+  "description": "Implementation of a CLI RPN Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlvx/rpn-calculator-cli.git"
+  },
+  "author": "José Del Valle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlvx/rpn-calculator-cli/issues"
+  },
+  "homepage": "https://github.com/dlvx/rpn-calculator-cli#readme"
+}
