@@ -62,7 +62,8 @@ function ask() {
       ask();
     } else {
       operands = calculate(input, operands)
-      console.log(chalk.bold.yellow(operands[operands.length - 1]));
+      const currentValue = operands[operands.length - 1] || 0;
+      console.log(chalk.bold.yellow(currentValue));
       ask();
     }
   });

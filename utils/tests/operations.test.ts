@@ -108,7 +108,7 @@ describe("Arithmetic operations", () => {
     let input = '+'
     operands = calculate(input, operands)
     let result = operands[operands.length - 1];
-    expect(result).toBe(0);
+    expect(result).toBe(undefined);
 
     operands = [1];
     input = '+'
@@ -120,13 +120,13 @@ describe("Arithmetic operations", () => {
     input = '+ 1 - 2'
     operands = calculate(input, operands)
     result = operands[operands.length - 1];
-    expect(operands).toEqual([-1, 2]);
+    expect(operands).toEqual([1, 2]);
 
     operands = [];
     input = '+ 1 - 2 +'
     operands = calculate(input, operands)
     result = operands[operands.length - 1];
-    expect(result).toBe(1);
+    expect(result).toBe(3);
   });
 
   test("RPN Calculation - Invalid characters are ignored", () => {
@@ -140,7 +140,7 @@ describe("Arithmetic operations", () => {
     input = '@a'
     operands = calculate(input, operands)
     result = operands[operands.length - 1];
-    expect(result).toBe(0);
+    expect(result).toBe(undefined);
   });
 })
 
