@@ -1,33 +1,21 @@
-function add(a?: number, b?: number): number {
-  if(a && b) {
-    return a + b
-  }
-
-  return a || b || 0
+export function add(a?: number, b?: number): number {
+  return a + b;
 }
 
-function subtract(a?: number, b?: number): number {
-  if(a && b) {
-    return a - b
-  }
-
-  return a || b || 0
+export function subtract(a?: number, b?: number): number {
+  return a - b;
 }
 
-function multiply(a?: number, b?: number): number {
-  if(a && b) {
-    return a * b
-  }
-
-  return 0
+export function multiply(a?: number, b?: number): number {
+  return a * b;
 }
 
-function divide(a?: number, b?: number): number {
-  if(a && b) {
-    return a / b
+export function divide(a?: number, b?: number): number {
+  if(!b) {
+    return 0;
   }
 
-  return 0
+  return a / b;
 }
 
 
